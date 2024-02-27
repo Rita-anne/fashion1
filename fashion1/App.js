@@ -105,17 +105,20 @@ return(
 )}
 </ScrollView>
 </View>
+
 <Text style={{fontSize:20,fontWeight:500,top:10,margin:10}}>
   Product Results (43)
 </Text>
-
+<ScrollView>
+  <View style={{display:'flex', flexDirection:'row',flexWrap:'wrap',alignItems:'center',justifyContent:'center',gap:'10'}}>
   {stock.map((item,index)=>{
     return(<View key={index}>
       <Stock product={item.product} clothe={item.clothe} cost={item.cost}/>
     </View>)
-    
+ 
   })}
-
+    </View>
+ </ScrollView>
     </View>
     
   )}
